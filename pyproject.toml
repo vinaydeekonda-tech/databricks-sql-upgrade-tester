@@ -1,0 +1,22 @@
+[project]
+name = "databricks-sql-upgrade-tester"
+version = "0.1.0"
+description = "Scan a SQL Git repository and EXPLAIN-check it on any Databricks SQL warehouse before a SQL runtime upgrade."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Databricks SQL upgrade tester contributors" }]
+dependencies = []
+
+[project.optional-dependencies]
+dev = []
+
+[project.scripts]
+databricks-sql-upgrade = "databricks_sql_upgrade.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
